@@ -8,6 +8,8 @@ let taskInput = document.querySelector("#new_task");
 //Define Event Listners
 form.addEventListener('submit', addTask);
 taskList.addEventListener('click', removeTask);
+clearBtn.addEventListener('click', clearTask);
+
 
 
 //Define Functions
@@ -32,5 +34,17 @@ function removeTask(e) {
         let parentElement = e.target.parentElement;
         parentElement.remove();
     } 
+    e.preventDefault();
+}
+
+function clearTask(e) {
+
+    //taskList.innerHTML = '';
+    // console.log(`This is test..........`);
+
+    while(taskList.firstChild) {
+        taskList.firstChild.remove()
+    }
+
     e.preventDefault();
 }
