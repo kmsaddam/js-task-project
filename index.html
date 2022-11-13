@@ -11,13 +11,15 @@
     <div class="container">
         <h4>Create Task</h4>
         <form class="" id="task_form">
-            <input type="text" id="task" name="task"><input type="submit" value="Add Task">
+            <input type="text" id="new_task" name="task" placeholder="New Task"><input type="submit" value="Add Task">
         </form>
 
         <h4>Task List</h4>
         <input type="text" id="task_filter" name="task_filter">
-        <ul id="task_list"></ul>
+        <ul id="tasks"></ul>
+        <button type="button" class="clear_task_btn">Clear Tasks</button>
     </div>
     
+    <script src="script.js"></script>
 </body>
 </html>
